@@ -1,6 +1,13 @@
 django-bootstrap3-datetimepicker
 ================================
 
+it provide a full feathured widget for bootstrap3 datetime picker via a callendar. 
+beware that it use https://github.com/Eonasdan/bootstrap-datetimepicker jquery plugin instead of the 
+http://www.eyecon.ro/bootstrap-datepicker old one which don't provides all feathure such as 
+datetimepicker linking (to ... from ...)
+
+
+
 This package uses Bootstrap v3 datetimepicker widget version 2 provided by the following project:
  https://github.com/Eonasdan/bootstrap-datetimepicker
 
@@ -14,7 +21,12 @@ visit https://github.com/zokis/django-bootstrap-datetimepicker
 Install
 -------------------------------
 
-* Run `pip install django-bootstrap3-datetimepicker`
+since the version on PyPi is out of date, you can't currently install via pip, or 
+you will download the datetimepicker using eyecon.ro instead of Eonasdan one
+
+* download the zip from github
+* unzip the archive
+* python setup.py install
 * Add `'bootstrap3_datetime'` to your `INSTALLED_APPS`
 
 
@@ -89,6 +101,10 @@ Bootstrap3 and jQuery have to be included along with `{{ form.media }}`
 
 Release Notes
 -------------------------------
+###### v3.0
+
+* using https://github.com/Eonasdan/bootstrap-datetimepicker version 3.0
+
 
 ###### v2.3
 

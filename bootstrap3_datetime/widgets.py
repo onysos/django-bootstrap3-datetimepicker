@@ -24,7 +24,7 @@ class DateTimePicker(DateTimeInput):
                 lang = translation.get_language()
                 if lang:
                     lang = lang.lower()
-                    #There is language name that length>2 *or* contains uppercase.
+                    # There is language name that length>2 *or* contains uppercase.
                     lang_map = {
                         'ar-ma': 'ar-ma',
                         'en-au': 'en-au',
@@ -93,7 +93,9 @@ class DateTimePicker(DateTimeInput):
                 var callback = function() {
                     $(function(){$("#%(picker_id)s:has(input:not([readonly],[disabled]))").datetimepicker(%(options)s);});
                 };
-                if(window.addEventListener)
+                if (document.readyState === "complete")
+                    callback();
+                else if(window.addEventListener)
                     window.addEventListener("load", callback, false);
                 else if (window.attachEvent)
                     window.attachEvent("onload", callback);
