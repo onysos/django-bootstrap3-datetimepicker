@@ -142,8 +142,8 @@ class DateTimePicker(DateTimeInput):
         html = self.html_template % dict(div_attrs=flatatt(div_attrs),
                                          input_attrs=flatatt(input_attrs),
                                          icon_attrs=flatatt(icon_attrs))
-        if self.options:
-            self.options['language'] = translation.get_language()
+        if isinstance(self.options, dict):
+            self.options.setdefault('language', translation.get_language())
         js = self.js_template % dict(picker_id=picker_id,
                                          options=json.dumps(self.options or {}))
 
