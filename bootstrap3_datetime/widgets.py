@@ -44,7 +44,7 @@ class DateTimePicker(DateTimeInput):
                         'zh-hk': 'zh-TW',
                     }
                     if len(lang) > 2:
-                        lang = lang_map.get(lang, lan[:2])
+                        lang = lang_map.get(lang, lang[:2])
                     if lang not in ('en', 'en-us'):
                         yield 'bootstrap3_datetime/js/locales/bootstrap-datetimepicker.%s.js' % (lang)
 
