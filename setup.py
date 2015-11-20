@@ -8,7 +8,7 @@ setup(
                                           'static/bootstrap3_datetime/js/*.js',
                                           'static/bootstrap3_datetime/js/locales/*.js', ]},
     include_package_data=True,
-    version='3.0.4',
+    version='3.0.5',
     description='Bootstrap3 compatible datetimepicker for Django projects.',
     long_description=open('README.rst').read(),
     author='Nakahara Kunihiko',
